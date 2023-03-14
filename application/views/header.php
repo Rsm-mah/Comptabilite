@@ -58,8 +58,8 @@
                 <div class="col-lg-4">
                     <nav class="site-navigation text-right ml-auto " role="navigation">
                         <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                          <li><a href="" class="nav-link">Informations</a></li>
-                          <li><a href="" class="nav-link">Comptes Generaux</a></li>
+                          <li><a href="<?php echo site_url('');?>" class="nav-link">Informations</a></li>
+                          <li><a href="<?php echo site_url('organisation_comptable/plan_comptable');?>" class="nav-link">Comptes Generaux</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -73,8 +73,8 @@
                 <div class="col-lg-4">
                     <nav class="site-navigation text-left mr-auto " role="navigation">
                         <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="" class="nav-link">Comptes Tiers</a></li>
-                        <li><a href="" class="nav-link">Code Journal</a></li>
+                        <li><a href="<?php echo site_url('organisation_comptable/compte_tiers');?>" class="nav-link">Comptes Tiers</a></li>
+                        <li><a href="<?php echo site_url('organisation_comptable/code_journal');?>" class="nav-link">Code Journal</a></li>
                         </ul>
                     </nav>
                 </div>

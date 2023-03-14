@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Plan_comptable extends CI_Controller {
+class Organisation_comptable extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,6 +22,20 @@ class Plan_comptable extends CI_Controller {
 	{
 		$this->load->view('header');
 		$this->load->view('plan_comptable');
+		$this->load->view('footer');
+	}
+
+	public function compte_tiers()
+	{
+		$this->load->view('header');
+		$this->load->view('compte_tiers');
+		$this->load->view('footer');
+	}
+
+	public function code_journal()
+	{
+		$this->load->view('header');
+		$this->load->view('code_journal');
 		$this->load->view('footer');
 	}
     
