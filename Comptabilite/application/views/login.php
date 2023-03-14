@@ -51,10 +51,6 @@
                             <button class="btn btn--radius btn--green" type="submit">Se Connecter</button>
                         </div>
                     </form>
-
-                        <div class="p-t-20">
-                            <a href="<?php echo site_url('login/inscription_utilisateur');?>"><button class="btn btn--radius btn--green" type="submit">Inscription</button></a>
-                        </div>
                     
                 </div>
             </div>
