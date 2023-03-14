@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Organisation_comptable extends CI_Controller {
+class Plan_comptable extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,7 +18,7 @@ class Organisation_comptable extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function plan_comptable()
+	public function compte_generaux()
 	{
 		$this->load->view('header');
 		$this->load->view('plan_comptable');

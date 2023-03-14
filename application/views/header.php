@@ -59,13 +59,13 @@
                     <nav class="site-navigation text-right ml-auto " role="navigation">
                         <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                           <li><a href="<?php echo site_url('');?>" class="nav-link">Informations</a></li>
-                          <li><a href="<?php echo site_url('organisation_comptable/plan_comptable');?>" class="nav-link">Comptes Generaux</a></li>
+                          <li><a href="<?php echo site_url('plan_comptable/compte_generaux');?>" class="nav-link">Comptes Generaux</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-4 text-center">
                     <div class="site-logo">
-                        <a href="">Brand</a>
+                        <img src="<?php echo base_url('assets/images/logo.png');?>" width="50px">
                     </div>
 
                     <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3 text-black"></span></a></div>
@@ -73,8 +73,8 @@
                 <div class="col-lg-4">
                     <nav class="site-navigation text-left mr-auto " role="navigation">
                         <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="<?php echo site_url('organisation_comptable/compte_tiers');?>" class="nav-link">Comptes Tiers</a></li>
-                        <li><a href="<?php echo site_url('organisation_comptable/code_journal');?>" class="nav-link">Code Journal</a></li>
+                        <li><a href="<?php echo site_url('plan_comptable/compte_tiers');?>" class="nav-link">Comptes Tiers</a></li>
+                        <li><a href="<?php echo site_url('plan_comptable/code_journal');?>" class="nav-link">Code Journal</a></li>
                         </ul>
                     </nav>
                 </div>
