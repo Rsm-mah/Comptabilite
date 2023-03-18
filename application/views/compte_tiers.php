@@ -7,11 +7,23 @@
 
             <table class="table align-middle mb-0 bg-white" style="text-align: center;">
                 <tbody>
-
+                    <?= form_open('c_compteTiers/addCompteTiers') ?>
                     <tr>
                         <td>
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="idCompteGeneraux">
+                                        <?php for($i = 0; $i < count($allCompteGeneraux); $i++) { ?>
+                                            <option value="<?php echo $allCompteGeneraux[$i]['idcompte_generaux']; ?>"><?php echo $allCompteGeneraux[$i]['intitule']; ?></option>
+                                    <?php  } ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
                             <div class="input-group" style="margin-left: 5px;">
-                                <input class="input--style-1" type="number" placeholder="NUMERO DE COMPTE" name="numero_compte" style="text-align: center;">
+                                <input class="input--style-1" type="number" placeholder="NUMERO DE COMPTE" name="code" style="text-align: center;">
                             </div>
                         </td>
 
@@ -22,41 +34,28 @@
                         </td>
                         
                         <td>
-                            <a href=""><button class="button-ajout">Ajouter</button></a>
+                            <button class="button-ajout" type="submit">Ajouter</button>
                         </td>
                     </tr>
+                    </form>
 
 
-                    <tr>
-                        <td>    
-                            <p class="fw-normal mb-1">4011</p>
-                        </td>
+                    <?php for($i = 0; $i < count($allCompteTiers); $i++) { ?>
+                        <tr>
+                            <td>    
+                                <p class="fw-normal mb-1"><?php echo $allCompteTiers[$i]['numero']; ?></p>
+                            </td>
 
-                        <td>
-                            <p class="fw-normal mb-1">TOVO</p>
-                        </td>
+                            <td>
+                                <p class="fw-normal mb-1"><?php echo $allCompteTiers[$i]['intitule']; ?></p>
+                            </td>
 
-                        <td>
-                            <a href="<?php echo site_url('plan_comptable/modif_plan_comptable');?>"><button class="button-modif">Modifier</button></a>
-                            <a href=""><button class="button-supp">Supprimer</button></a>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <td>
-                            <p class="fw-normal mb-1">4012</p>
-                        </td>
-
-                        <td>
-                            <p class="fw-normal mb-1">RINDRA</p>
-                        </td>
-
-                        <td>
-                            <a href="<?php echo site_url('plan_comptable/modif_plan_comptable');?>"><button class="button-modif">Modifier</button></a>
-                            <a href=""><button class="button-supp">Supprimer</button></a>
-                        </td>
-                    </tr>
+                            <td>
+                                <a href="<?php echo site_url('c_compteTiers/modifCompteTiers/'.$allCompteTiers[$i]['idcompte_tiers']);?>"><button class="button-modif">Modifier</button></a>
+                                <a href="<?php echo site_url('c_compteTiers/deleteCompteTiers/'.$allCompteTiers[$i]['idcompte_tiers']);?>"><button class="button-supp">Supprimer</button></a>
+                            </td>
+                        </tr>
+                   <?php } ?>
 
 
                 </tbody>

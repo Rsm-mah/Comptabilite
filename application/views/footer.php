@@ -9,9 +9,9 @@
             
             <ul class="list-unstyled nav-links mb-5">
               <li><a href="#">Informations</a></li>
-              <li><a href="<?php echo site_url('plan_comptable/compte_generaux');?>">Comptes Generaux</a></li>
-              <li><a href="<?php echo site_url('plan_comptable/compte_tiers');?>">Comptes Tiers</a></li>
-              <li><a href="<?php echo site_url('plan_comptable/code_journal');?>">Code Journal</a></li>
+              <li><a href="<?php echo site_url('c_compteGeneraux/compte_generaux');?>">Comptes Generaux</a></li>
+              <li><a href="<?php echo site_url('c_compteTiers/compteTiers');?>">Comptes Tiers</a></li>
+              <li><a href="<?php echo site_url('c_codeJournal/codeJournal');?>">Code Journal</a></li>
             </ul>
 
             <div class="copyright">

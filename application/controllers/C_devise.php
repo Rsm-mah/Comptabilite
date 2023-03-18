@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Information extends CI_Controller {
+class C_devise extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,10 +18,15 @@ class Information extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('header');
-		$this->load->view('footer');
-	}
 
+    public function devise() 
+    {
+        $data['alldevise'] = $this->devise->getAllDevise();
+
+        $this->load->view('header');
+		$this->load->view('page_devise', $data);
+		$this->load->view('footer');
+
+    }
+   
 }

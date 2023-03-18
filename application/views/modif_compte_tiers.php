@@ -16,7 +16,6 @@
     <link href="<?php echo base_url('assets/vendor/mdi-font/css/material-design-iconic-font.min.css');?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assets/vendor/font-awesome-4.7/css/font-awesome.min.css');?>" rel="stylesheet" media="all">
     <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Vendor CSS-->
     <link href="<?php echo base_url('assets/vendor/select2/select2.min.css');?>" rel="stylesheet" media="all">
@@ -33,16 +32,17 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Modification du Compte</h2>
-                    <form method="POST">
-
+                    <?= form_open('c_compteTiers/updateValueCompteTiers') ?>
+                    
+                        <input type="hidden" name="id" value="<?php echo $detailComteTiers[0]['idcompte_tiers']; ?>">
+                        <input type="hidden" name="idCompteGeneraux" value="<?php echo $detailComteTiers[0]['idcompte_generaux']; ?>">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" name="code">
+                            <input class="input--style-1" type="text" name="code" value="<?php echo $detailComteTiers[0]['numero']; ?>">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="INTITULE" name="intitule">
+                            <input class="input--style-1" type="text" placeholder="INTITULE" name="intitule" value="<?php echo $detailComteTiers[0]['intitule']; ?>">
                         </div>
-
 
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green" type="submit">Modifier</button>
@@ -50,7 +50,7 @@
                     </form>
 
                         <div class="p-t-20">
-                            <a href="<?php echo site_url('');?>"><button class="btn btn--radius btn--green" type="submit">Retour</button></a>
+                            <a href="<?php echo site_url('c_compteTiers/compteTiers');?>"><button class="btn btn--radius btn--green" type="submit">Retour</button></a>
                         </div>
                 </div>
             </div>

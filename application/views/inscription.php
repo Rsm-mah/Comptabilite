@@ -10,13 +10,13 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Identité de l'entreprise</title>
 
     <!-- Icons font CSS-->
     <link href="<?php echo base_url('assets/vendor/mdi-font/css/material-design-iconic-font.min.css');?>" rel="stylesheet" media="all">
     <link href="<?php echo base_url('assets/vendor/font-awesome-4.7/css/font-awesome.min.css');?>" rel="stylesheet" media="all">
     <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+ 
 
     <!-- Vendor CSS-->
     <link href="<?php echo base_url('assets/vendor/select2/select2.min.css');?>" rel="stylesheet" media="all">
@@ -33,7 +33,7 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Information de votre Societe</h2>
-                    <form method="POST">
+                    <?php echo form_open_multipart('inscription/addEntreprise');?>
 
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="NOM" name="nom">
@@ -65,12 +65,6 @@
                                     <input class="input--style-1" type="text" placeholder="TELEPHONE" name="telephone">
                                 </div>
                             </div>
-
-                            <div class="col-2">                
-                                <div class="input-group">
-                                    <input class="input--style-1" type="text" placeholder="TELECOPIE" name="telecopie">
-                                </div>
-                            </div>
                         </div>
 
                         <div class="input-group">
@@ -100,42 +94,37 @@
 
 
                         <div class="input-group">
-                            <input class="input--style-1" type="file" placeholder="NIF" name="nif">
+                            <input class="input--style-1" type="text" placeholder="NIF" name="num_nif">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="file" name="nif">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="file" placeholder="NF" name="nf">
+                            <input class="input--style-1" type="text" placeholder="NS" name="num_ns">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="file" name="ns">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="file" placeholder="NRCS" name="nrcs">
+                            <input class="input--style-1" type="text" placeholder="NRCS" name="num_nrcs">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="file" name="nrcs">
                         </div>
 
 
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class">
-                                    <option disabled="disabled" selected="selected">TENU DE COMPTE</option>
-                                    <option>ARIARY</option>
-                                    <option>EURO</option>
-                                    <option>DOLLAR</option>
+                                <select name="devise_tenu_compte">
+                                    <?php for($i = 0; $i < count($devise_tenu_compte); $i++) { ?>
+                                        <option value="<?php echo $devise_tenu_compte[$i]['iddevise']; ?>"><?php echo $devise_tenu_compte[$i]['nom']; ?></option>
+                                  <?php  } ?>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                            
-                        
-                        <div class="input-checkbox" style="display: flex;">
-                            <input class="" type="checkbox">
-                            <p>EURO</p>
-
-                            <input class="" type="checkbox">
-                            <p>DOLLAR</p>
-
-                            <input class="" type="checkbox">
-                            <p>MUR</p>
-                        </div>
-
                         
 
                         <div class="p-t-20">
@@ -155,6 +144,7 @@
     <script src="<?php echo base_url('assets/vendor/datepicker/daterangepicker.js');?>"></script>
 
     <script src="<?php echo base_url('assets/js/global.js');?>"></script>
+    
 
 </body>
 

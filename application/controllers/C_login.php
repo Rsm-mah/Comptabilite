@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class C_login extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,5 +23,23 @@ class Login extends CI_Controller {
 		$this->load->view('login');
 		
 	}	
+
+	public function verifLogin()
+	{
+		$data = array();
+
+		$email = $this->input->post('email');
+
+		$mdp = $this->input->post('mot_de_passe');
+
+		$value = $this->user->getUtilisateur($email, $mdp);
+
+		if($value == null) {
+			$this->load->view('login');
+
+		}else{
+			redirect('c_compteGeneraux/compte_generaux');
+		}
+	}
     
 }
