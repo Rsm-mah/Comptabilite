@@ -120,10 +120,11 @@
       <div class="col col-lg-6 mb-4 mb-lg-0" style="width:70%;">
         <div class="card mb-3" style="border-radius: .5rem;">
           <div class="row g-0">
-            <div class="col-md-4 gradient-custom text-center text-white"
-              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-              <h2><?php echo $user['nom'];?></h2>
-              <h3><?php echo $user['prenom'];?></h3>
+            <div class="col-md-4 gradient-custom text-center text-white" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <div class="name">
+                <h2><?php echo $user['nom'];?></h2>
+                <h3><?php echo $user['prenom'];?></h3>
+              </div>
               <i class="far fa-edit mb-5"></i>
             </div>
             <div class="col-md-8">
