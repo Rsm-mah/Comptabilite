@@ -32,22 +32,31 @@
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
             <div class="card card-1">
-                <div class="card-heading">
-                </div>
                 <div class="card-body">
-                    <h2 class="title">Login</h2>
-                    <form action="<?php echo site_url('identify');?>" method="post">
+                    <h2 class="title">Ajouter un plat de regime</h2>
+                    <form action="<?php echo site_url('c_ajout/insert_sportive');?>" method="post">
 
                         <div class="input-group">
-                            <input class="input--style-1 form-control" type="email" placeholder="EMAIL" data-parsley-trigger="change" name="email" require="">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="objectif">
+                                    <?php for($i = 0; $i < count($objectif); $i++) { ?>
+                                        <option value="<?php echo $objectif[$i]['idobjectif']; ?>"><?php echo $objectif[$i]['nomobjectif']; ?></option>
+                                  <?php  } ?>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1 form-control" type="password" placeholder="MOT DE PASSE" data-parsley-minlength="5" name="mot_de_passe" require="">
+                            <input class="input--style-1 form-control" type="text" placeholder="SPORT" name="sport" require="">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-1 form-control" type="number" placeholder="CALORIE" name="calorieperdue" require="">
                         </div>
                         
                         <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit">Se Connecter</button>
+                            <button class="btn btn--radius btn--green" type="submit">Ajouter</button>
                         </div>
 
                     </form>

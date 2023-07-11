@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_profil extends CI_Controller {
+class C_tableau extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,17 +18,22 @@ class C_profil extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function tableau_regime()
 	{
-        $useractuelle = $this->session->userdata('useractuelle');
+        $data['plat'] = $this->platregime->getAllPlat();
 
-        if ($useractuelle) {
-            $data['user'] = $this->identifiant->getUtilisateurByIdentifiant($useractuelle);
-    
-            $this->load->view('profil', $data);
-        } else {
-            redirect('login');
-        }
+        $this->load->view('header');
+        $this->load->view('tableau_regime',$data);
+        $this->load->view('footer');
+	}	
+
+    public function tableau_sportive()
+	{
+        $data['sport'] = $this->sportregime->getAllSport();
+
+        $this->load->view('header');
+        $this->load->view('tableau_sportive',$data);
+        $this->load->view('footer');
 	}	
     
 }

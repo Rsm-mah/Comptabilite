@@ -19,18 +19,26 @@ class Identify extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$email = $this->input->post('email');
-		$mdp = $this->input->post('mot_de_passe');
+    {
+        $email = $this->input->post('email');
+        $mdp = $this->input->post('mot_de_passe');
 
-		$value = $this->identifiant->getIdentifiant($email, $mdp);
+        $value = $this->identifiant->getIdentifiant($email, $mdp);
 
-		if($value == null) {
-			redirect('c_login');
-		}else{
-			redirect('setup/index/'.$value);
-		}
-	}
+        if ($value['ididentifiant'] === null) {
+            redirect('c_login');
+        } else {
+            $this->session->set_userdata('useractuelle', $value['ididentifiant']);
+
+            if ($value['isadmin'] == 0) {
+                $this->session->set_userdata('isadmin', $value['isadmin']);
+                redirect('setup/index/'.$value['ididentifiant']);
+            } else if ($value['isadmin'] == 1) {
+                $this->session->set_userdata('isadmin', $value['isadmin']);
+                redirect('c_profil');
+            }
+        }
+    }
 
     public function logadmin()
 	{
@@ -41,7 +49,8 @@ class Identify extends CI_Controller {
 
 		if($value == null) {
 			redirect('c_login');
-		}else{
+		} else if ($value['isadmin'] == true) {
+            $this->session->userdata('isadmin',true);
 			redirect('setup/setupadmin/'.$value);
 		}
 	}

@@ -2,10 +2,19 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Platregime extends CI_Model {
+        public function insertPlatRegime($idobjectif,$plat,$calorie,$prix) {
+            $sql = "INSERT INTO platregime(idobjectif,plat,calorie,prix) VALUES (%d,'%s',%d,%d)";
+            
+            $sql = sprintf($sql, $idobjectif,$plat,$calorie,$prix);
+
+            $this->db->query($sql);
+        }
+
+
         public function getAllPlat() {
             $plat = array();
 
-            $sql = "SELECT * FROM platregime";
+            $sql = "SELECT objectif.nomobjectif as objectif,plat,calorie,prix FROM platregime join objectif on objectif.idobjectif=platregime.idobjectif";
 
             $query = $this->db->query($sql);
 

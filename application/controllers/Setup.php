@@ -24,7 +24,6 @@ class Setup extends CI_Controller {
             redirect('login');
         }
         $useractuelle = $this->identifiant->getUtilisateurByIdentifiant($ididentifiant);
-        $this->session->set_userdata('useractuelle',$useractuelle['ididentifiant']);
 		redirect('c_profil');
 	}
 

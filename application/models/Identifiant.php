@@ -12,16 +12,10 @@
             }
         
             public function getIdentifiant($email , $password) {    
-                $request="select ididentifiant from identifiant where email='%s' and motdepasse='%s'";
+                $request="select ididentifiant,isadmin from identifiant where email='%s' and motdepasse='%s'";
                 $request=sprintf($request, $email, $password);
-
                 $result=$this->db->query($request);
-
-                if($result=$result->row_array()){
-                    return $result['ididentifiant'];
-                }else{
-                    return false;
-                }
+                return $result->row_array();
             }
 
             public function getUtilisateurByIdentifiant($ididentifiant)

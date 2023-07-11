@@ -29,49 +29,97 @@
     </div>
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 col-md-1 col-6 order-md-1 order-1">
-                        <div class="header__humberger">
-                            <i class="fa fa-bars humberger__open"></i>
+    <?php
+        if ($this->session->userdata('isadmin') != 1) { ?>
+            <header class="header">
+                <div class="header__top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-1 col-6 order-md-1 order-1">
+                                <div class="header__humberger">
+                                    <i class="fa fa-bars humberger__open"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-10 order-md-2 order-3">
+                                <nav class="header__menu">
+                                    <ul>
+                                        <li><a href="<?php echo site_url('c_accueil');?>">Accueil</a></li>
+                                        <li><a href="<?php echo site_url('c_objectif');?>">Objectif</a></li>
+                                        <li><a href="<?php echo site_url('c_profil');?>">Profil</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
+                                <div class="header__search">
+                                    <i class="fa fa-search search-switch"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-10 order-md-2 order-3">
-                        <nav class="header__menu">
-                            <ul>
-                                <li><a href="<?php echo site_url('c_accueil');?>">Accueil</a></li>
-                                    <div class="header__megamenu__wrapper">
-                                        
-                                    </div>
-                                </li>
-                                <li><a href="<?php echo site_url('c_objectif');?>">Objectif</a></li>
-                                <li><a href="<?php echo site_url('c_profil');?>">Profil</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
-                        <div class="header__search">
-                            <i class="fa fa-search search-switch"></i>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__logo">
+                                <a href="./index.html"><img src="<?php echo base_url('assets/img/REZIME.png');?>" alt=""></a>
+                            </div>
+                        </div>
+                        
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="<?php echo base_url('assets/img/REZIME.png');?>" alt=""></a>
+            </header> 
+        <?php } else { ?>
+                <header class="header">
+                <div class="header__top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-1 col-6 order-md-1 order-1">
+                                <div class="header__humberger">
+                                    <i class="fa fa-bars humberger__open"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-10 order-md-2 order-3">
+                                <nav class="header__menu">
+                                    <ul>
+                                        <li><a href="">Statistique</a></li>
+                                        <li class="dropdown"><a href="">Crud</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="<?php echo site_url('c_tableau/tableau_regime');?>">Régimes</a></li>
+                                                <li><a href="<?php echo site_url('c_tableau/tableau_sportive');?>">Activités sportives</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="<?php echo site_url('c_objectif');?>">Objectif</a></li>
+                                        <li><a href="<?php echo site_url('c_profil');?>">Profil</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
+                                <div class="header__search">
+                                    <i class="fa fa-search search-switch"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__logo">
+                                <a href="./index.html"><img src="<?php echo base_url('assets/img/REZIME.png');?>" alt=""></a>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </header>
+            </header> 
+        <?php }?>
+    
     <!-- Header Section End -->
