@@ -2,10 +2,10 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Sportregime extends CI_Model {
-        public function insertSportRegime($idobjectif,$sport,$calorieperue) {
+        public function insertSportRegime($idobjectif,$sport,$calorieperdue) {
             $sql = "INSERT INTO sportregime(idobjectif,sport,calorieperdue) VALUES (%d,'%s',%d)";
             
-            $sql = sprintf($sql, $idobjectif,$plat,$alorie,$prix);
+            $sql = sprintf($sql, $idobjectif,$sport,$calorieperdue);
 
             $this->db->query($sql);
         }
