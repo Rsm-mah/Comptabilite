@@ -36,11 +36,11 @@
                     <form action="<?php echo site_url('c_inscription/insertion');?>" method="post">
 
                         <div class="input-group">
-                            <input class="input--style-1" type="number" placeholder="TAILLE" name="taille" required>
+                            <input class="input--style-1" type="number" placeholder="TAILLE(CM)" name="taille" required>
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="number" placeholder="POID" name="poid" required>
+                            <input class="input--style-1" type="number" placeholder="POID(KG)" name="poid" required>
                         </div>
                         
                         <input type="hidden" value="<?php echo $nom ;?>" name="nom">

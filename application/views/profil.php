@@ -145,11 +145,11 @@
                 <div class="row pt-1">
                   <div class="col-6 mb-3">
                     <h6>Taille</h6>
-                    <p class="text-muted"><?php echo $user['taille'];?></p>
+                    <p class="text-muted"><?php echo $user['taille'];?> cm</p>
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Poids</h6>
-                    <p class="text-muted"><?php echo $user['poids'];?></p>
+                    <p class="text-muted"><?php echo $user['poids'];?> kg</p>
                   </div>
                 </div>
 
