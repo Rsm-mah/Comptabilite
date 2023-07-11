@@ -22,8 +22,11 @@ class C_devise extends CI_Controller {
     public function devise() 
     {
         $data['alldevise'] = $this->devise->getAllDevise();
+		$data['allCodeJournal'] = $this->cj->getAllCodeJournal();
+		$data['sumdebitBalance'] = $this->balance->sumdebitBalance();
+        $data['sumcreditBalance'] = $this->balance->sumcreditBalance();
 
-        $this->load->view('header');
+		$this->load->view('header', $data);
 		$this->load->view('page_devise', $data);
 		$this->load->view('footer');
 

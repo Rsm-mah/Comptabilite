@@ -4,10 +4,10 @@
     class CompteTiers extends CI_Model {
         
 
-        public function insertCompteT($idcompte_generaux, $numero, $intitule) {
-            $sql = "INSERT INTO Compte_tiers(idcompte_generaux, numero, intitule) VALUES (%d, '%s', '%s')";
+        public function insertCompteT($numero, $intitule) {
+            $sql = "INSERT INTO Compte_tiers(numero, intitule) VALUES ('%s', '%s')";
             
-            $sql = sprintf($sql, $idcompte_generaux, $numero, $intitule);
+            $sql = sprintf($sql, $numero, $intitule);
 
             $this->db->query($sql);
         }

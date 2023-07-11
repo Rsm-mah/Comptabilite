@@ -57,6 +57,19 @@
             return $row;
         }
 
+        public function getCompteGByNum_Compte($id) {
+
+            $sql = "SELECT * FROM Compte_generaux WHERE numero = %d";
+
+            $sql = sprintf($sql, $id);
+
+            $query = $this->db->query($sql);
+
+            $row = $query->result_array();
+
+            return $row;
+        }
+
     }
 
 ?>

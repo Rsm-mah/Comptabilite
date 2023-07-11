@@ -1,33 +1,53 @@
-<footer class="footer-16371">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-9 text-center">
 
-            <div class="footer-site-logo mb-4">
-                <img src="<?php echo base_url('assets/images/logo.png');?>" width="50px">
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="footer__instagram">
             </div>
-            
-            <ul class="list-unstyled nav-links mb-5">
-              <li><a href="#">Informations</a></li>
-              <li><a href="<?php echo site_url('c_compteGeneraux/compte_generaux');?>">Comptes Generaux</a></li>
-              <li><a href="<?php echo site_url('c_compteTiers/compteTiers');?>">Comptes Tiers</a></li>
-              <li><a href="<?php echo site_url('c_codeJournal/codeJournal');?>">Code Journal</a></li>
-            </ul>
-
-            <div class="copyright">
-              <p class="mb-0"><small>&copy; Copyright 2023</small></p>
-            </div>
-
-
-          </div>
         </div>
-      </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__text">
+                        <div class="footer__logo">
+                            <a href="#"><img src="<?php echo base_url('assets/img/REZIME.png');?>" alt=""></a>
+                        </div>
+                        <p> 
+                            Nous recommandons de se limiter à un verre de jus de fruits ou de boisson sucrée par jour,<br> 
+                            même pour les jus industriels 100% jus et sans sucre ajouté, de privilégier les jus fraîchement pressés plus riches en vitamine <br> 
+                            et rappel qu'un verre de jus de fruit ne peut pas être comptabiliser dans les 5 fruits et légumes par jour.
+                        </p>
+                    </div>
+                    <div class="footer__copyright">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <!-- Footer Section End -->
 
-
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
     
-    <script src="<?php echo base_url('js/jquery-3.3.1.min.js');?>"></script>
-    <script src="<?php echo base_url('js/popper.min.js');?>"></script>
-    <script src="<?php echo base_url('js/bootstrap.min.js');?>"></script>
-  </body>
+    <!-- Js Plugins -->
+    <script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.slicknav.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.sticky.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/owl.carousel.min.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/main.js');?>"></script>
+
+</body>
+
 </html>

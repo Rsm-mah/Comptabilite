@@ -22,8 +22,10 @@ class C_codeJournal extends CI_Controller {
 	public function codeJournal()
 	{
         $data['allCodeJournal'] = $this->cj->getAllCodeJournal();
+		$data['sumdebitBalance'] = $this->balance->sumdebitBalance();
+        $data['sumcreditBalance'] = $this->balance->sumcreditBalance();
 
-		$this->load->view('header');
+		$this->load->view('header',$data);
 		$this->load->view('code_journal', $data);
 		$this->load->view('footer');
 	}

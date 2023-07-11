@@ -178,7 +178,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 
 			if ($this->_file_new)
 			{
-				chmod($this->_file_path.$session_id, 0600);
+				chmod($this->_file_path.$session_id, 0700);
 				$this->_fingerprint = md5('');
 				return '';
 			}

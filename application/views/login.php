@@ -27,7 +27,6 @@
 </head>
 
 
-
 <body>
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
@@ -38,15 +37,13 @@
                     <?= form_open('c_login/verifLogin') ?>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="EMAIL" name="email">
+                            <input class="input--style-1 form-control" type="email" placeholder="EMAIL" data-parsley-trigger="change" name="email" require="">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="password" placeholder="MOT DE PASSE" name="mot_de_passe">
+                            <input class="input--style-1 form-control" type="password" placeholder="MOT DE PASSE" data-parsley-minlength="5" name="mot_de_passe" require="">
                         </div>
                         
-
-
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green" type="submit">Se Connecter</button>
                         </div>
@@ -64,6 +61,7 @@
     <script src="<?php echo base_url('assets/vendor/datepicker/moment.min.js');?>"></script>
     <script src="<?php echo base_url('assets/vendor/datepicker/daterangepicker.js');?>"></script>
     <script src="<?php echo base_url('assets/js/global.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/parsley.js');?>"></script>
 
 </body>
 

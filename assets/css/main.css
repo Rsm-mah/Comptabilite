@@ -177,10 +177,6 @@ body {
   font-weight: 700;
 }
 
-.btn:hover {
-  padding: 0 50px;
-}
-
 .btn--radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -188,11 +184,17 @@ body {
 }
 
 .btn--green {
-  background: rgb(59, 58, 58);
+  width: 4cm;
+  background: #f69e41;
+}
+
+.suivant {
+  margin-left: 12.2cm;
+  width: 3cm;
 }
 
 .btn--green:hover {
-  background: rgb(87, 85, 85);
+  background: #fb9d38;
 }
 
 /* ==========================================================================
@@ -396,6 +398,7 @@ input {
    #TITLE
    ========================================================================== */
 .title {
+  color: #f69e41;
   text-align: center;
   margin-bottom: 37px;
 }
@@ -417,6 +420,16 @@ input {
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
+.card-1 .card-heading {
+  text-align: right;
+  margin: 15px 30px 0px 0px;
+}
+
+.card-1 .card-heading a{
+  text-decoration: none;
+  color: #f69e41;
+}
+
 
 .card-1 .card-body {
   padding: 0 90px;
@@ -432,52 +445,14 @@ input {
   }
 }
 
-/* .input-checkbox input[type=checkbox]:before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #555555;
-  border-radius: 3px;
-} */
-
-/* .input-checkbox input[type=checkbox]:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  border: 2px solid #555555;
-  border-radius: 3px;
-  background-color: white;
+.card-body .link-insc {
+  text-decoration: none;
+  color: rgb(59, 58, 58);
 }
-
-.input-checkbox input[type=checkbox]:checked:after {
-  display: block;
-  width: 5px;
-  height: 10px;
-  border: solid blue;
-  border-width: 0 2px 2px 0;
-  position: absolute;
-  top: 2px;
-  left: 6px;
-} */
 
 .body_page .body_list .body_title {
   text-align: center;
-  margin: 40px 0px 60px 0px;
-}
-
-.body_page .body_list button {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 4cm;
-  height: 2.3em;
-  border: none;
-  border-radius: 20px;
-  color: white;
+  margin: 65px 0px 65px 0px;
 }
 
 .body_page .body_list button:hover {
@@ -485,15 +460,14 @@ input {
   transition: 1s;
 }
 
-.body_page .body_list .button-modif{
-  background: rgb(59, 58, 58);
-}
-
-.body_page .body_list .button-modif:hover{
-  background: rgb(87, 85, 85);
-}
-
 .body_page .body_list .button-ajout{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 4cm;
+  height: 2.3em;
+  border: none;
+  border-radius: 20px;
+  color: white;
   background: green;
 }
 
@@ -501,10 +475,203 @@ input {
   background: rgb(12, 180, 12);
 }
 
-.body_page .body_list .button-supp{
-  background: rgba(223, 27, 27, 0.991);
+.body_page .body_list i {
+  font-size: 17px;
+  margin-left: 20px;
 }
 
-.body_page .body_list .button-supp:hover{
-  background: red;
+.fa-edit::before {
+  color: rgb(59, 58, 58);
+}
+
+.fa-trash-alt::before {
+  color: red;
+}
+
+.body_page .body_list .button-see-journal{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 4cm;
+  height: 2.3em;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background: rgba(27, 102, 223, 0.991);
+}
+
+.body_page .body_list .button-see-journal:hover{
+  background: blue;
+}
+
+.body_page .body_list .body_choise_mois {
+  margin-left: 13cm;
+  margin-bottom: 65px;
+}
+
+.body_page .body_list .button-choise-mois {
+  margin-bottom: 20px;
+  width: 4cm;
+  height: 2.3em;
+  border: none;
+  color: white;
+  background: rgb(59, 58, 58);
+}
+
+.body_page .body_button_grandLivre {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.body_page .body_button_grandLivre .button-grandlivre {
+  margin-top: 10px;
+  width: 4cm;
+  height: 2.3em;
+  border: none;
+  color: white;
+}
+
+.body_page .body_list .info_facture {
+  text-align: center;
+  margin-top: 65px;
+}
+
+.body_page .body_list .info_facture .contact {
+  margin-top: 2%;
+}
+
+.body_page .body_list .info_facture .objet_facture {
+  margin-bottom: 2%;
+}
+
+.body_page .body_list .info_facture .objet_facture p{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.body_page .body_list .info_facture .contact .hr {
+  width: 50%;
+  margin-left: 26%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.body_page .body_list .info_facture .objet_facture h4 {
+  display: flex;
+  padding-left: 14.5cm
+}
+
+.body_page .body_list .info_facture .objet_facture .info_objet_facture {
+  text-align: initial;
+}
+
+.body_page .body_list .info_facture .objet_facture .input-date-facture {
+  width: 20%;
+  margin-left: 10px;
+}
+
+.body_page .body_list .info_facture .objet_facture .info_objet_facture .client {
+  display: -webkit-inline-box;
+  width: 35%;
+}
+
+.body_page .body_list .info_facture .objet_facture .info_objet_facture .ref-bc {
+  display: -webkit-inline-box;
+  width: 35%;
+}
+
+.body_page .body_list .info_facture .objet_facture .info_objet_facture .ref-bc .input-group{
+  margin-left: 2rem;
+}
+
+.body_page .body_list .info_facture .objet_facture .info_objet_facture .objet {
+  display: -webkit-inline-box;
+  width: 35%;
+}
+
+.body_page .body_list .info_facture .objet_facture .info_objet_facture .objet .input-group{
+  margin-left: 2.75rem;
+}
+
+.body_page .Total {
+  text-align: right;
+    margin-top: 50px;
+    padding-right: 5.2cm;
+}
+
+.body_page .button-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5cm;
+}
+
+.body_page .button-list button {
+  width: 8rem;
+  height: 2rem;
+  color: white;
+}
+
+.body_page .button-list a {
+  color: white;
+}
+
+.body_page .button-list .button-annuler {
+  background-color: red;
+}
+
+.body_page .button-list .button-annuler:hover {
+  background-color: rgba(255, 0, 0, 0.786);
+}
+
+.body_page .button-list .button-modifier {
+  background-color: blue;
+}
+
+.body_page .button-list .button-modifier:hover {
+  background-color: rgba(0, 0, 255, 0.786);
+}
+
+.body_page .button-list .button-valider {
+  background-color: green;
+}
+
+.body_page .button-list .button-valider:hover {
+  background-color: rgba(0, 128, 0, 0.786);
+}
+
+.body_page .body_list .list-button-search {
+  margin-bottom: 1.5cm;
+  display: flex;
+}
+
+.body_page .body_list .list-button-search .ajout-facture button {
+  width: 10rem;
+  height: 2rem;
+  margin-left: 3.5rem;
+  background-color: green;
+  color: white;
+}
+
+.body_page .body_list .list-button-search .ajout-facture i {
+  margin: 0;
+}
+
+.body_page .body_list .list-button-search .search {
+  display: flex;
+}
+
+.body_page .body_list .list-button-search .search .input-group{
+  width: 10rem;
+}
+
+.body_page .body_list .list-button-search .search .button-search button{
+  width: 5rem;
+  height: 2rem;
+  margin-top: 9px;
+  margin-left: 2rem;
+  background-color: rgb(59, 58, 58);
+}
+
+.body_page .body_list .list-button-search .search .button-search i{
+  color: white;
+  margin: 0;
 }

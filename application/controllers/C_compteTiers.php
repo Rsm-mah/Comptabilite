@@ -23,8 +23,11 @@ class C_compteTiers extends CI_Controller {
     {
         $data['allCompteTiers'] = $this->ct->getAllCompteT();
         $data['allCompteGeneraux'] = $this->cg->getAllCompteG();
+		$data['allCodeJournal'] = $this->cj->getAllCodeJournal();
+		$data['sumdebitBalance'] = $this->balance->sumdebitBalance();
+        $data['sumcreditBalance'] = $this->balance->sumcreditBalance();
 
-        $this->load->view('header');
+		$this->load->view('header', $data);
 		$this->load->view('compte_tiers', $data);
 		$this->load->view('footer');
 
@@ -68,11 +71,10 @@ class C_compteTiers extends CI_Controller {
 
     public function addCompteTiers()
 	{
-        $compteGeneraux = $this->input->post('idCompteGeneraux');
-		$code = $this->generateZero($this->input->post('code'));
+        $numero = $this->input->post('numero');
 		$intitule = $this->input->post('intitule');
 
-		$this->ct->insertCompteT($compteGeneraux, $code, $intitule);
+		$this->ct->insertCompteT($numero, $intitule);
     
 		$this->compteTiers();
 

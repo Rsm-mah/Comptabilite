@@ -22,8 +22,11 @@ class C_compteGeneraux extends CI_Controller {
 	{
 
 		$compteGeneraux['compteGeneraux'] = $this->cg->getAllCompteG();
+		$data['allCodeJournal'] = $this->cj->getAllCodeJournal();
+		$data['sumdebitBalance'] = $this->balance->sumdebitBalance();
+        $data['sumcreditBalance'] = $this->balance->sumcreditBalance();
 
-		$this->load->view('header');
+		$this->load->view('header', $data);
 		$this->load->view('compte_generaux', $compteGeneraux);
 		$this->load->view('footer');
 	}

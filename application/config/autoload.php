@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database');
+$autoload['libraries'] = array('session','database');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'form', 'file');
+$autoload['helper'] = array('url','form','file');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('CompteGeneraux' => 'cg' , 'CompteTiers' => 'ct' , 'CodeJournal' => 'cj' , 'Devise' => 'devise' , 'Entreprise' => 'entreprise', 'Equivalence' => 'equiv' , 'Utilisateur' => 'user' , 'Nif' => 'nif' , 'Nrcs' => 'nrcs' , 'Ns' => 'ns');
+$autoload['model'] = array('identifiant' => 'identifiant' , 'genre' => 'genre' , 'utilisateur' => 'utilisateur' , 'objectif' => 'objectif' , 'platregime' => 'platregime' , 'sportregime' => 'sportregime');

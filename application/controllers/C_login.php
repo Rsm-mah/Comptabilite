@@ -20,25 +20,29 @@ class C_login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('index');
 		
-	}	
+	}
+	
+	public function loginadmin()
+	{
+		$this->load->view('loginadmin');
+	}
 
 	public function verifLogin()
 	{
 		$data = array();
 
 		$email = $this->input->post('email');
-
 		$mdp = $this->input->post('mot_de_passe');
 
-		$value = $this->user->getUtilisateur($email, $mdp);
+		$value = $this->identifiant->getIdentifiant($email, $mdp);
 
 		if($value == null) {
-			$this->load->view('login');
+			redirect('c_login');
 
 		}else{
-			redirect('c_compteGeneraux/compte_generaux');
+			redirect('setup/index/'.$value);
 		}
 	}
     
