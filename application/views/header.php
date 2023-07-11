@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.min.css');?>" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/slicknav.min.css');?>" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/table.css');?>" type="text/css">
 </head>
 
 <body>
