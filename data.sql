@@ -62,8 +62,8 @@ insert into identifiant(email,motdepasse,isadmin) values ('admin@gmail.com','adm
 insert into genre(nomgenre) values ('HOMME');
 insert into genre(nomgenre) values ('FEMME');
 
-insert into Utilisateur(ididentifiant,nom,prenom,idgenre,datedenaissance,taille,poids) values (1,'RASAMISOA','Mahefa',1,'2004-01-01',175,70);
-insert into Utilisateur(ididentifiant,nom,prenom,idgenre,datedenaissance,taille,poids) values (2,'TEST','admin',1,'2005-02-10',170,80);
+insert into utilisateur(ididentifiant,nom,prenom,idgenre,datedenaissance,taille,poids) values (1,'RASAMISOA','Mahefa',1,'2004-01-01',175,70);
+insert into utilisateur(ididentifiant,nom,prenom,idgenre,datedenaissance,taille,poids) values (2,'TEST','admin',1,'2005-02-10',170,80);
 
 insert into objectif(nomobjectif) values ('Perte de poid');
 insert into objectif(nomobjectif) values ('Prise de poid');
