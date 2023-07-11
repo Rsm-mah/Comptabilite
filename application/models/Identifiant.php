@@ -26,7 +26,7 @@
 
             public function getUtilisateurByIdentifiant($ididentifiant)
             {
-                $request="select identifiant.email,identifiant.isadmin,utilisateur.ididentifiant,nom,prenom,datedenaissance from utilisateur 
+                $request="select identifiant.email,identifiant.isadmin,utilisateur.ididentifiant,nom,prenom,datedenaissance,taille,poids from utilisateur 
                 join identifiant on identifiant.ididentifiant=utilisateur.ididentifiant where utilisateur.ididentifiant='%s'";
                 $request=sprintf($request, $ididentifiant);
                 $result=$this->db->query($request);
