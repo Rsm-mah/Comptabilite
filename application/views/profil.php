@@ -94,7 +94,7 @@
                                         <li class="dropdown"><a href="">Crud</a>
                                             <ul class="dropdown__menu">
                                                 <li><a href="<?php echo site_url('c_tableau/tableau_regime');?>">Régimes</a></li>
-                                                <li><a href="<?php echo site_url('c_objectif/tableau_sportive');?>">Activités sportives</a></li>
+                                                <li><a href="<?php echo site_url('c_tableau/tableau_sportive');?>">Activités sportives</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="<?php echo site_url('c_objectif');?>">Objectif</a></li>

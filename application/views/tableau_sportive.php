@@ -1,5 +1,5 @@
 <center>
-   <button type="button" class="btn-ajouter">Ajouter</button>
+<button type="button" class="btn-ajouter"><a href="<?php echo site_url('c_ajout/ajout_sportive');?>">Ajouter</a></button>
   <table>
     <thead>
       <tr>
